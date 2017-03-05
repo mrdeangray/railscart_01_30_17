@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--<title>Railscart013017</title>-->
+  
+  <title><%=(yield(:title) + " - " unless yield(:title).blank?).to_s + "Rails"   %></title>
+         
+  
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  
+  <nav class='nav'>
+    <div class='nav_pages'>
+    <%=link_to "Home", root_path%>
+    <%=link_to "Project/Tasks", projects_path%>
+    <%=link_to "Shop", products_path%>
+    <%=link_to "Cart (#{session[:totalQuantity]}) #{number_to_currency(session[:totalAmount], unit: '$')}", cart_index_path%>
+    <%=link_to "Drums", drums_objectives_path%>
+    <%=link_to "Bass", bass_objectives_path%>
+    <%=link_to "Guitar", guitar_objectives_path%>
+    <%=link_to "Piano", piano_objectives_path%>
+    <%=link_to "DIV Practice", pages_practice1_path%>
+    <%=link_to "HAML Practice", pages_practice2_path%>
+    <%=link_to "Gritty", pages_gritty_path%>
+    </div>
+  <div class='sign_pages'>
+    <%if !user_signed_in?%>
+    <%=link_to "Sign In", root_path%>
+    <%=link_to "Sign Up", root_path%>
+    <%else%>
+    <%=link_to "Log Out", root_path%>
+    <%end%>
+  </div>
+
+    
+  </nav>
+  
+<div class='main'>
+  <%= yield %>
+</div>
+
+</body>
+</html>

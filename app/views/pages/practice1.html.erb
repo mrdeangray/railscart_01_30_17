@@ -1,0 +1,20 @@
+<%=content_for :title, 'Javascript/DIV practice'%>
+<script>
+    function changeText(){
+        var x = document.getElementsByClassName('top');
+        x[0].innerHTML='yo se que';
+    }
+</script>
+
+<button type='button' onclick='changeText();'>ChangeText</button>
+<h1>Pages#practice1</h1>
+<p>Find me in app/views/pages/practice1.html.erb</p>
+
+<center>
+<div style='width:1000px'>
+    <div class='top'>Arriba</div>
+    <div class='left'>Izquierda</div>
+    <div class='right'>Derecha</div>
+    <div class='bottom'>Abajo</div>
+</div>
+</center>

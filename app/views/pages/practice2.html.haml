@@ -1,0 +1,16 @@
+%h1 Pratíca Haml
+%p Pratíca Haml
+
+-Product.all.each do |p|
+  =p.title
+  %br/
+
+%a{:href => '#'}
+  %img{:src=>'#'}
+
+%center
+  %div{:style =>'width:1000px'}
+    .top Arriba
+    .left izquierda
+    .right Derecha
+    .bottom Abajo

@@ -1,0 +1,112 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+*{
+    margin: 0;
+    
+}
+
+.main{
+    margin: 40px 0 0 5%;
+    
+}
+
+
+.nav{
+    width: 100%;
+    line-height: 40px;
+    background-color:black;
+}
+
+.nav_pages a, .sign_pages a{
+    color: white;
+    line-height: 40px;
+    padding: 0 10px 0 10px;
+}
+
+.nav_pages {
+    float: left;
+    margin: 0 0 0 20px;
+    
+}
+
+.sign_pages{
+    float: right;
+    margin: 0 40px 0 0;
+}
+
+.small-image{
+    height: 40px;
+    border: black 2px solid;
+}
+
+.completed_task{
+    opacity: 0.4;
+    text-decoration: line-through;
+}
+
+h1{
+    font-family: Lobster, Monospace;
+    text-align: center;
+    color:purple;
+    font-size: 40px;
+    text-shadow: 2px 2px black;
+}
+h6{
+    text-align: center;
+    color:purple;
+    font-style:italic;
+}
+
+.top{
+    background-color:black;
+    color:white;
+    width:1000px;
+    height: 100px;
+}
+
+.left{
+    background-color:red;
+    color:white;
+    width:200px;
+    height: 400px;
+    float:left;
+}
+
+.right{
+    background-color:green;
+    color:white;
+    width:800px;
+    height: 400px;
+    float:left;
+}
+.bottom{
+    background-color:yellow;
+    color:black;
+    width:1000px;
+    height: 100px;
+    float:left;
+}
+
+#sound{
+    width: 100%;
+}
+
+
+p{
+    line-height: 150%;
+}
+
